@@ -1,0 +1,18 @@
+select choice in Create_Database List_Database Drop_Database Connect_Database 
+do 
+case $REPLY in
+1 ) ./createDb
+;;
+2 ) ./listDb
+;;
+3 ) ./dropDb
+;;
+4 ) ./connectDb
+;;
+* ) 
+echo "Error"
+break
+;;
+esac 
+done
+
