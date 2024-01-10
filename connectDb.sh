@@ -5,13 +5,13 @@ table_menu () {
   select choice in "${options[@]}"
   do
     case $REPLY in
-      1 ) echo "Create Table"
+      1 ) ../createtable.sh
       ;;
-      2 ) echo "Listing Tables"
+      2 ) ../listable.sh
       ;;
-      3 ) echo "Dropping Table..."
+      3 ) ../droptable.sh
       ;;
-      4 ) echo "Insert"
+      4 ) ../insertable.sh
       ;;
       5 ) echo "Select From Table"
       ;;
@@ -65,7 +65,7 @@ else
         #echo "Connected to Database $selected_dir"
         #table_menu
       #fi
-    fi
+   # fi
   fi
 fi
 
