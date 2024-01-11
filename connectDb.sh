@@ -24,7 +24,7 @@ table_menu () {
       ;;
     esac
 
- 
+
   done
 }
 
