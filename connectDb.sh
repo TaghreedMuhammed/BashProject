@@ -13,7 +13,7 @@ table_menu () {
       ;;
       4 ) ../insertable.sh
       ;;
-      5 ) echo "Select From Table"
+      5 ) ../selecTable.sh
       ;;
       6 ) ../updatetable.sh
       ;;
