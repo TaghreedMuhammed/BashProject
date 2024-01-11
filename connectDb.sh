@@ -15,7 +15,7 @@ table_menu () {
       ;;
       5 ) echo "Select From Table"
       ;;
-      6 ) echo "Update From Table"
+      6 ) ../updatetable.sh
       ;;
       7 ) echo "Delete"
       ;;
