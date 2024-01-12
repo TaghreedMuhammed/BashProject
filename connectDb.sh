@@ -1,6 +1,6 @@
 table_menu () {
   PS3="Select Your Option: "
-  options=("Create Table" "List Tables" "Drop Table" "Insert" "Select From Table" "Update From Table" "Delete")
+  options=("Create Table" "List Tables" "Drop Table" "Insert" "Select From Table" "Update From Table" "Delete" "Exit")
 
   select choice in "${options[@]}"
   do
@@ -17,7 +17,9 @@ table_menu () {
       ;;
       6 ) ../updatetable.sh
       ;;
-      7 ) echo "Delete"
+      7 ) ../Delete.sh
+      ;;
+      8 ) exit
       ;;
       *) echo "ERROR!!"
       break

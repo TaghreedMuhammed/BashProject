@@ -1,3 +1,4 @@
+PS3="Enter a Number : " 
 select choice in Create_Database List_Database Drop_Database Connect_Database 
 do 
 case $REPLY in
