@@ -12,7 +12,7 @@ variableNames=$(tail -1 "$dataType")
 declare -a nameArr=($(echo "$variableNames" | tr ':' ' '))   
 echo "${variableNames}"
 PS3="which select want: "
-  options=("select by Row" "select by Columns")
+  options=("select by Row" "select by Columns" "Exit")
 
   select choice in "${options[@]}"
   do
@@ -21,7 +21,7 @@ PS3="which select want: "
       PS3="Selection by Row : "
   options=("select all records" "Select some records" 
   "Select from special record to last " 
-  "select record on condition")
+  "select record on condition" "Exit") 
   select choice in "${options[@]}"
   do
   case $REPLY in
@@ -102,6 +102,11 @@ PS3="which select want: "
   esac
   done
   fi
+   ;;
+  5 ) exit
+  ;;
+  * ) echo "Error"
+  
   esac
   done
       ;;
@@ -109,7 +114,7 @@ PS3="which select want: "
       
       2 )
         PS3="Selection by Colums : "
-  options=("select special column without condition" "select special column with condition")
+  options=("select special column without condition" "select special column with condition" "Exit")
   select choice in "${options[@]}"
   do
   case $REPLY in
@@ -210,13 +215,17 @@ cut -d: -f"${columns[*]}" "$dataOfTb" | paste
       
       fi
       ;;
-      3 )
-      echo "Error"
-      exit
+      3 ) exit 
+      ;;
+      
+      
+      * ) echo "Error"
+    
      
      esac
   done  
   ;;
+  3 ) exit;;
       * )
       echo "Error"
      exit
